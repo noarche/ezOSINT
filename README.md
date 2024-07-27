@@ -26,7 +26,7 @@ Results are saved in the app directory or root directory of this script.
 
 # ꧁꧂ Updating
 
-I have already updated ALOT of these keys so they do not give false positives and just flat out fixed some from where the site updated code and broke the keychecks.. However there is alot of work that still needs to be done. If you want to commit changes, it will be appreciated. 
+Once you download the Exe or .py script you will only need to download the new config.ini file to update. I will try to fix/update/add to this list regularly.  If you want to commit changes you find to config it will be appreciated. 
 
 
 # ꧁꧂  Buy me a coffee ☕
