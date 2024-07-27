@@ -5,6 +5,28 @@ from colorama import Fore, Style, init
 from datetime import datetime
 import time
 
+main_logo = '''
+
+
+\033[92m███████╗███████╗ ██████╗ ███████╗██╗███╗   ██╗████████╗\033[0m
+\033[92m██╔════╝╚══███╔╝██╔═══██╗██╔════╝██║████╗  ██║╚══██╔══╝\033[0m
+\033[92m█████╗    ███╔╝ ██║   ██║███████╗██║██╔██╗ ██║   ██║   \033[0m
+\033[92m██╔══╝   ███╔╝  ██║   ██║╚════██║██║██║╚██╗██║   ██║   \033[0m
+\033[92m███████╗███████╗╚██████╔╝███████║██║██║ ╚████║   ██║   \033[0m
+\033[92m╚══════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝   ╚═╝   \033[0m
+                                                       
+                                                          
+      \033[95m****************************\033[0m
+      \033[96m github.com/noarche/ezOSINT \033[0m
+      \033[94m     Username Recon         \033[0m
+      \033[95m****************************\033[0m
+
+   \033[94m  Please push your edits if you add to the config.ini\nAlways get the latest update from the repo.\033[0m
+
+'''
+
+print(main_logo)
+
 # Initialize colorama
 init(autoreset=True)
 
