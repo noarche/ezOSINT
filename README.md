@@ -1,3 +1,7 @@
+![ezOSINT](https://github.com/user-attachments/assets/d15bb1b5-5bc9-4251-900f-55e3f113ed68)
+
+
+
 # ꧁꧂  ezOSINT
 ezOSINT is a cross platform Username lookup tool used in OSINT. What sets this version apart is how easy it is for anyone to add sites and/or commit updates to the repo. Designed to be easy. 
 
