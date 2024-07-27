@@ -9,9 +9,11 @@ The config template for each site is only 2 lines. The URL - replace the actual 
 
 Example: 
 
-`[Link 138]
-url = https://facebook.com/{USER}
-valid_string = ProfileCometTilesFeed.react`
+`[Link 138]`
+
+`url = https://facebook.com/{USER}`
+
+`valid_string = ProfileCometTilesFeed.react`
 
 
 # ꧁꧂ Valid Results
