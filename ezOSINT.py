@@ -21,7 +21,7 @@ main_logo = '''
       \033[94m     Username Recon         \033[0m
       \033[95m****************************\033[0m
 
-   \033[94m  Please push your edits if you add to the config.ini\nAlways get the latest update from the repo.\033[0m
+\033[94m  Please push your edits if you add to the config.ini\nAlways get the latest update from the repo.\033[0m
 
 '''
 
@@ -61,7 +61,7 @@ def check_validity(content, valid_string):
 def log_result(user, url, valid_string):
     with open("results.txt", "a") as file:
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        file.write(f"{timestamp} | {user} | {url} | {valid_string}\n")
+        file.write(f"{timestamp} | {user} | {url}\n")
 
 def process_url(url, valid_string, user):
     formatted_url = url.format(USER=user)
