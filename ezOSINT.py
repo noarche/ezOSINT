@@ -58,17 +58,17 @@ def fetch_content(url):
 def check_validity(content, valid_string):
     return valid_string in content
 
-def log_result(user, url):
+def log_result(user, url, valid_string):
     with open("results.txt", "a") as file:
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        file.write(f"{timestamp} | {user} | {url}\n")
+        file.write(f"{timestamp} | {user} | {url} | {valid_string}\n")
 
 def process_url(url, valid_string, user):
     formatted_url = url.format(USER=user)
     content = fetch_content(formatted_url)
     if check_validity(content, valid_string):
         print(Fore.GREEN + f"\nValid content found at {formatted_url}")
-        log_result(user, formatted_url)
+        log_result(user, formatted_url, valid_string)
     else:
         print(Fore.CYAN + f"\rChecking {formatted_url}... ", end="")
 
