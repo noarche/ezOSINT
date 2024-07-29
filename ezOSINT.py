@@ -30,10 +30,10 @@ print(main_logo)
 # Initialize colorama
 init(autoreset=True)
 
-def read_config(filename):
+def read_config():
     # Create a ConfigParser instance with no interpolation
     config = configparser.ConfigParser(interpolation=None)
-    config.read(filename)
+    config.read('config.ini')
     
     links_with_valid_strings = []
     for section in config.sections():
@@ -73,16 +73,7 @@ def process_url(url, valid_string, user):
         print(Fore.CYAN + f"\rChecking {formatted_url}... ", end="")
 
 def main():
-    scan_type = input(Fore.CYAN + "Select scan type (full/quick): ").strip().lower()
-    if scan_type == 'full':
-        config_file = 'config.ini'
-    elif scan_type == 'quick':
-        config_file = 'config-quick.ini'
-    else:
-        print(Fore.RED + "Invalid scan type selected. Exiting...")
-        return
-
-    links_with_valid_strings = read_config(config_file)
+    links_with_valid_strings = read_config()
     user = input(Fore.CYAN + "Input Target USERNAME: ")
 
     for url, valid_string in links_with_valid_strings:
