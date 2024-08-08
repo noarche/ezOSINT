@@ -47,3 +47,8 @@ Once you download the Exe or .py script you will only need to download the new c
 
 ![noarche's GitHub stats](https://github-readme-stats.vercel.app/api?username=noarche&show_icons=true&theme=transparent)
 
+# ꧁꧂  Docker Image
+
+`docker pull torquetraction/ezosint`
+
+`docker run -it torquetraction/ezosint`
