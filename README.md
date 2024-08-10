@@ -49,5 +49,8 @@ Once you download the Exe or .py script you will only need to download the new c
 
 # ꧁꧂  Docker Image
 
+`docker pull torquetraction/ezosint:latest`
+
+`docker run -it torquetraction/ezosint`
 
 [Download Docker Image](https://hub.docker.com/repository/docker/torquetraction/ezosint/general)
