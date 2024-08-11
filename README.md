@@ -6,7 +6,7 @@ ezOSINT is a cross platform Username lookup tool used in OSINT. What sets this v
 
 # ꧁꧂ Adding sites 🔍
 
-Open config.ini and follow the template. You can only provide a valid keycheck, everything else will be considered invalid. This means you must look at the source of both pages and then use a  [Diffchecker](https://www.diffchecker.com/) or [WinMerge](https://github.com/WinMerge/winmerge)and find something that is on the valid version that can not be found when searching the invalid version. 
+Open config.ini and follow the template. You can only provide a valid keycheck, everything else will be considered invalid. This means you must look at the source of both pages and then use a  [Diffchecker](https://www.diffchecker.com/) or [WinMerge](https://github.com/WinMerge/winmerge) and find something that is on the valid version that can not be found when searching the invalid version. 
 
 The config template for each site is only 2 lines. The URL - replace the actual username with {USER} & the valid string to look for.
 
