@@ -25,7 +25,9 @@ Results are saved in the app directory or root directory of this script.
 
 # ꧁꧂ Updating 🔮
 
-Once you download the Exe or .py script you will only need to download the new config.ini file to update. I will try to fix/update/add to this list regularly.  If you want to commit changes you find to config it will be appreciated. 
+After downloading the docker or .py script you will only need to download the new config.ini file to update. I will try to fix/update/add to this list regularly.  
+
+If you find public profiles not on list feel free to commit changes you find to config it will be appreciated by everyone who uses. As of 8/10/2024 there are 0% false positive results.
 
 
 # ꧁꧂  Buy me a coffee ☕
