@@ -5,7 +5,7 @@
 # ꧁꧂  ezOSINT
 ezOSINT is a cross platform Username lookup tool used in OSINT. What sets this version apart is how easy it is for anyone to add sites and/or commit updates to the repo. Designed to be easy. 
 
-# ꧁꧂ Adding sites
+# ꧁꧂ Adding sites 🔍
 
 Open config.ini and follow the template. You can only provide a valid keycheck, everything else will be considered invalid. This means you must look at the source of both pages and then use a site or tool like [Diffchecker](https://www.diffchecker.com/) and find something that is on the valid version that can not be found when searching the invalid version. 
 
@@ -20,11 +20,11 @@ Example:
 `valid_string = ProfileCometTilesFeed.react`
 
 
-# ꧁꧂ Valid Results
+# ꧁꧂ Valid Results 💯
 
 Results are saved in the app directory or root directory of this script. 
 
-# ꧁꧂ Updating
+# ꧁꧂ Updating 🔮
 
 Once you download the Exe or .py script you will only need to download the new config.ini file to update. I will try to fix/update/add to this list regularly.  If you want to commit changes you find to config it will be appreciated. 
 
@@ -47,7 +47,7 @@ Once you download the Exe or .py script you will only need to download the new c
 
 ![noarche's GitHub stats](https://github-readme-stats.vercel.app/api?username=noarche&show_icons=true&theme=transparent)
 
-# ꧁꧂  Docker Image
+# ꧁꧂  Docker Image 🪅
 
 `docker pull torquetraction/ezosint:latest`
 
