@@ -6,7 +6,6 @@ from datetime import datetime
 import time
 
 main_logo = '''
-
                    [91m_[0m       [93m_[0m   
   [92m_[0m[96m_[0m[94m_[0m [95m_[0m[91m_[0m[93m_[0m[92m_[0m[96m_[0m[94m_[0m[95m_[0m  [91m_[0m[93m_[0m[92m_[0m[96m([0m[94m_[0m[95m)[0m[91m_[0m [93m_[0m[92m_[0m [96m|[0m [94m|[0m[95m_[0m 
  [91m/[0m [93m_[0m [92m\[0m[96m_[0m  [94m/[0m [95m_[0m [91m\[0m[93m/[0m [92m_[0m[96m_[0m[94m|[0m [95m|[0m [91m'[0m[93m_[0m [92m\[0m[96m|[0m [94m_[0m[95m_[0m[91m|[0m
@@ -17,9 +16,8 @@ main_logo = '''
 \033[94m       Username Recon         \033[0m
 \033[95m  ****************************\033[0m
 
-\033[94mPlease push your edits if you add to the config.ini\nAlways get the latest update from the repo.\033[0m
+\033[94mPlease push your edits if you add to the config.ini\nAlways get the latest update from the repo.\033[0m'''
 
-'''
 
 print(main_logo)
 
@@ -37,7 +35,6 @@ exitnote = '''
 init(autoreset=True)
 
 def read_config():
-    
     config = configparser.ConfigParser(interpolation=None)
     config.read('config.ini')
     
@@ -58,7 +55,6 @@ def fetch_content(url):
         response.raise_for_status()  
         return response.text
     except requests.RequestException:
-        
         return ""
 
 def check_validity(content, valid_string):
@@ -80,11 +76,13 @@ def process_url(url, valid_string, user):
 
 def main():
     links_with_valid_strings = read_config()
-    user = input(Fore.CYAN + "Input Target USERNAME: ")
+    users = input(Fore.CYAN + "Input Target USERNAMES (separated by commas): ")
+    user_list = [user.strip() for user in users.split(',')]
 
-    for url, valid_string in links_with_valid_strings:
-        process_url(url, valid_string, user)
-        
+    for user in user_list:
+        for url, valid_string in links_with_valid_strings:
+            process_url(url, valid_string, user)
+    
     print(Fore.RESET + "\nAll tasks completed.")
 
     rerun = input(Fore.RED + "\nWould you like to run again? (yes/no): ").strip().lower()
