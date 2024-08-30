@@ -54,4 +54,4 @@ If you find public profiles not on list feel free to commit changes you find to 
 
 `docker run -it torquetraction/ezosint`
 
-[Download Docker Image](https://hub.docker.com/repository/docker/torquetraction/ezosint/general)
+[Download Docker Image](https://hub.docker.com/repository/docker/torquetraction/imap-recon/general)
