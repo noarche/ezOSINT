@@ -18,10 +18,39 @@ Example:
 
 `valid_string = ProfileCometTilesFeed.react`
 
+Update:
+
+Multiple valid strings may be used in the following format while only loading the page one time:
+
+valid1;valid2;valid3
+
+if one or more valid_strings are found it is logged once as valid.
+
 
 # ꧁꧂ Valid Results 💯
 
 Results are saved in the app directory or root directory of this script. 
+
+
+# ꧁꧂  Docker Image 🪅
+
+### Setup
+
+`docker pull torquetraction/ezosint:latest`
+
+`docker run -it -v strg_ezosint:/ezosint --name ezosint torquetraction/ezosint`
+
+This will setup the container and a persisent volume named strg_ezosint where results are saved. 
+
+### Restarting the docker 
+
+Start the container in docker desktop then run the command below
+
+`docker exec -it ezosint /bin/bash`
+
+`python3 ezOSINT.py`
+
+
 
 # ꧁꧂ Updating 🔮
 
@@ -48,23 +77,6 @@ If you find public profiles not on list feel free to commit changes you find to 
 
 ![noarche's GitHub stats](https://github-readme-stats.vercel.app/api?username=noarche&show_icons=true&theme=transparent)
 
-# ꧁꧂  Docker Image 🪅
-
-### Setup
-
-`docker pull torquetraction/ezosint:latest`
-
-`docker run -it -v strg_ezosint:/ezosint --name ezosint torquetraction/ezosint`
-
-This will setup the container and a persisent volume named strg_ezosint where results are saved. 
-
-### Restarting the docker 
-
-Start the container in docker desktop then run the command below
-
-`docker exec -it ezosint /bin/bash`
-
-`python3 ezOSINT.py`
 
 
 
