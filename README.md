@@ -38,9 +38,9 @@ Results are saved in the app directory or root directory of this script.
 
 `docker pull torquetraction/ezosint:latest`
 
-`docker run -it -v strg_ezosint:/ezosint --name ezosint torquetraction/ezosint`
+`docker run -it --name ezosint torquetraction/ezosint`
 
-This will setup the container and a persisent volume named strg_ezosint where results are saved. 
+This will setup the container where the output results are saved. 
 
 ### Restarting the docker 
 
