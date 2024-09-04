@@ -50,8 +50,24 @@ If you find public profiles not on list feel free to commit changes you find to 
 
 # ꧁꧂  Docker Image 🪅
 
+### Setup
+
 `docker pull torquetraction/ezosint:latest`
 
-`docker run -it torquetraction/ezosint`
+`docker run -it -v strg_ezosint:/ezosint --name ezosint torquetraction/ezosint`
+
+This will setup the container and a persisent volume named strg_ezosint where results are saved. 
+
+### Restarting the docker 
+
+Start the container in docker desktop then run the command below
+
+`docker exec -it ezosint /bin/bash`
+
+`python3 ezOSINT.py`
+
+
+
+
 
 [Download Docker Image](https://hub.docker.com/repository/docker/torquetraction/ezosint/general)
