@@ -26,10 +26,11 @@
 import configparser
 import requests
 import os
+import random  
 from colorama import Fore, Style, init
 from datetime import datetime
 import time
-
+from user_agents import USER_AGENTS 
 
 main_logo = '''
                    [91m_[0m       [93m_[0m   
@@ -57,7 +58,6 @@ exitnote = '''
 [93m([0m[92m_[0m[96m_[0m[94m_[0m[95m_[0m[91m_[0m[93m_[0m[92m_[0m[96m)[0m[94m([0m[95m_[0m[91m_[0m[93m_[0m[92m_[0m[96m_[0m[94m_[0m[95m_[0m[91m)[0m[93m([0m[92m_[0m[96m_[0m[94m_[0m[95m_[0m[91m_[0m[93m_[0m[92m_[0m[96m)[0m[94m([0m[95m_[0m[91m_[0m[93m_[0m[92m_[0m[96m_[0m[94m_[0m[95m/[0m   [91m|[0m[93m/[0m [92m\[0m[96m_[0m[94m_[0m[95m_[0m[91m/[0m    [93m\[0m[92m_[0m[96m/[0m   [94m([0m[95m_[0m[91m_[0m[93m_[0m[92m_[0m[96m_[0m[94m_[0m[95m_[0m[91m/[0m
 '''
 
-
 init(autoreset=True)
 
 def read_config():
@@ -74,7 +74,9 @@ def read_config():
 
 def fetch_content(url):
     try:
-        response = requests.get(url, timeout=3)
+        # Select a random user agent
+        headers = {'User-Agent': random.choice(USER_AGENTS)}
+        response = requests.get(url, headers=headers, timeout=3)
         
         if response.status_code in (404, 403, 405, 410, 406, 503):
             return ""
@@ -84,7 +86,6 @@ def fetch_content(url):
         return ""
 
 def check_validity(content, valid_strings):
-    
     for valid_string in valid_strings:
         if valid_string in content:
             return True
