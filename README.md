@@ -1,4 +1,4 @@
-![ezosint-](https://github.com/user-attachments/assets/7ff49f5c-5869-4664-ba7f-f689429ec7b2)
+![ezosint](https://github.com/user-attachments/assets/4beed3c2-989e-4976-a998-e29a312205a6)
 
 
 # ꧁꧂  ezOSINT 👁️‍🗨️
