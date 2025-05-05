@@ -13,6 +13,11 @@ import (
 	"gopkg.in/ini.v1"
 )
 
+// ================== CONFIGURATION ==================
+const maxThreads = 10
+
+// ===================================================
+
 var logo = `
 ╔════════════════════════════════════╗
 ║ ·································· ║
@@ -65,8 +70,11 @@ func loadConfig() ([]LinkCheck, error) {
 	return checks, nil
 }
 
-func checkLink(lc LinkCheck, username string, wg *sync.WaitGroup, mu *sync.Mutex) {
+func checkLink(lc LinkCheck, username string, wg *sync.WaitGroup, mu *sync.Mutex, semaphore chan struct{}) {
 	defer wg.Done()
+	semaphore <- struct{}{}        // Acquire slot
+	defer func() { <-semaphore }() // Release slot
+
 	url := strings.ReplaceAll(lc.URLTemplate, "{USER}", username)
 
 	req, _ := http.NewRequest("GET", url, nil)
@@ -134,6 +142,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	semaphore := make(chan struct{}, maxThreads) // Thread limit control
+
 	for _, username := range usernames {
 		username = strings.TrimSpace(username)
 		fmt.Printf("\nChecking: %s\n", colorBrightGreen(username))
@@ -143,7 +153,7 @@ func main() {
 
 		for _, link := range links {
 			wg.Add(1)
-			go checkLink(link, username, &wg, &mu)
+			go checkLink(link, username, &wg, &mu, semaphore)
 		}
 		wg.Wait()
 	}
